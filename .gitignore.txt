@@ -1,0 +1,24 @@
+# Python stuff
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+venv/
+.venv/
+
+# IDE files
+.idea/
+.vscode/
+
+# Env files
+.env
+*.env
+
+# OS trash
+.DS_Store
+Thumbs.db
+
+# Streamlit cache
+.streamlit/
