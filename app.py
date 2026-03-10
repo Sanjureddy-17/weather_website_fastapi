@@ -36,7 +36,11 @@ if st.button("Get Analysis"):
         st.error("Please enter a city.")
     else:
         with st.spinner("Fetching data..."):
-            resp = requests.get(API_URL, params={"city": city})
+            try:
+                resp = requests.get(API_URL, params={"city": city}, timeout=10)
+            except requests.exceptions.RequestException as e:
+                st.error(f"Connection failed: {e}")
+                st.stop()
 
         if resp.status_code != 200:
             st.error(f"API error: {resp.text}")
