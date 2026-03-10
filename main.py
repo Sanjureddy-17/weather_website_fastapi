@@ -9,6 +9,9 @@ import os
 load_dotenv()
 OPENWEATHER_API_KEY = os.getenv("OPENWEATHER_API_KEY")
 
+if not OPENWEATHER_API_KEY:
+    raise RuntimeError("OPENWEATHER_API_KEY not set")
+
 
 BASE_URL = "https://api.openweathermap.org/data/2.5/forecast"
 
