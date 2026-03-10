@@ -1,6 +1,0 @@
-fastapi
-uvicorn
-pandas
-httpx
-pydantic
-streamlit
